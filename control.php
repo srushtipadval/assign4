@@ -1,12 +1,12 @@
 <?php 
 
 header("Content-type: application/json");
-require 'Data.php';
+require 'menu.php';
 
 $req = $_GET['req'] ?? null;
 
 if($req) {
-  $file = file_get_contents("restaurant.json");
+  $file = file_get_contents("rest.json");
   $data = json_decode($jsonfile, true)['menu_items'];
   try {
     $ResMenu = new resMenu($data);
