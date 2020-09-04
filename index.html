@@ -72,10 +72,10 @@ p{
 
   <div class="container">
     <div class="mt-5 text-center">
-      <h1>Eat * Drink * Visit</h1>
-      <h2>A Warm Welcome</h2>
-      <h3>Whats in your Mind Today ??? </h3>
-      <p>Go grab your Favorites Cuisine and order yumm dishes</p>
+      <h1>Cafe L'il Hunger</h1>
+      <h2> Welcome!!</h2>
+      <h3> Choose your Cuisine</h3>
+      <p>Choose form variety of dishes</p>
     </div>
     <div id="demo" class="carousel slide" data-ride="carousel">
 
@@ -133,7 +133,7 @@ var items = {};
 
 $(document).ready(function () {
 
-  $.get("http://localhost/htdocs/Controller.php?req=res_list", function (data) {
+  $.get("https://github.com/srushtipadval/assign4/blob/master/control.php?req=res_list", function (data) {
     resMenu = data;
     resMenu.forEach((item, index) => {
       $("#Itemlist").append(`<option value=${index}>${item.name}</option>`);
@@ -143,7 +143,7 @@ $(document).ready(function () {
   $("#Itemlist").change((e) => {
     const selected = resMenu[e.target.value];
 
-    $.get("http://localhost/Data.php"=${selected.id}, function (data) {
+    $.get("https://github.com/srushtipadval/assign4/blob/master/menu.php"=${selected.id}, function (data) {
 
       items= data;
       $('#Dishes').html(
